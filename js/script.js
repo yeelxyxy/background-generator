@@ -8,3 +8,18 @@ console.log(getRandomColorChannel())
 // 3) Use the new RGB value to update the label "rgb(###, ####, ###)" (replacing ###s with the Number values)
 
 // 4) Wrap the random colour procedure in a function named `setNewColour()`, call it from the `console` to test
+
+let theBody = document.querySelector('body')
+let theMsg = document.querySelector('#rgbVal')
+
+
+
+function bgChanger(){
+let rCol = getRandomColorChannel()
+let gCol = getRandomColorChannel()
+let bCol = getRandomColorChannel()
+
+theBody.style.setProperty(`background-color`, `rgb(${rCol},${gCol},${bCol})`)
+theMsg.textContent = `rgb(${rCol},${gCol},${bCol})`
+}
+
